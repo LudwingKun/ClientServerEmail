@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<emails>
+    <email>
+        <sender>a@gmail.com</sender>
+        <recipients>a@gmail.com</recipients>
+        <object>ti prego</object>
+        <text/>
+        <date>Sat Jul 01 23:12:07 CEST 2023</date>
+        <news>true</news>
+        <id>0</id>
+    </email>
+    <email>
+        <sender>b@gmail.com</sender>
+        <recipients>a@gmail.com</recipients>
+        <object>non ci credo</object>
+        <text/>
+        <date>Sat Jul 01 23:12:44 CEST 2023</date>
+        <news>true</news>
+        <id>1</id>
+    </email>
+    <email>
+        <sender>a@gmail.com</sender>
+        <recipients>a@gmail.com,b@gmail.com</recipients>
+        <object/>
+        <text>ciaooo</text>
+        <date>Sat Jul 01 23:27:13 CEST 2023</date>
+        <news>true</news>
+        <id>2</id>
+    </email>
+    <email>
+        <sender>a@gmail.com</sender>
+        <recipients>a@gmail.com</recipients>
+        <object>prova a caso</object>
+        <text/>
+        <date>Sat Jul 01 23:52:22 CEST 2023</date>
+        <news>true</news>
+        <id>3</id>
+    </email>
+</emails>

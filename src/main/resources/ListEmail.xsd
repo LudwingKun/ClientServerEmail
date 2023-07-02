@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="listEmail">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Email" type="Email"  minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Email">
+        <xs:sequence>
+            <xs:element name="sender" type="xs:string"/>
+            <xs:element name="recipients" type="xs:string" maxOccurs="unbounded"/>
+            <xs:element name="object" type="xs:string"/>
+            <xs:element name="text" type="xs:string"/>
+            <xs:element name="sendingDate" type="xs:string"/>
+            <xs:element name="isRead" type="xs:boolean" default="false"/>
+            <xs:element name="id" type="xs:ID"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

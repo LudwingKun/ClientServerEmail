@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.ClientController">
+   <ListView fx:id="mailListView" layoutX="21.0" layoutY="41.0" prefHeight="313.0" prefWidth="200.0" />
+   <GridPane layoutX="235.0" layoutY="25.0" prefHeight="76.0" prefWidth="348.0">
+      <columnConstraints>
+         <ColumnConstraints hgrow="SOMETIMES" maxWidth="168.5" minWidth="10.0" prefWidth="83.0" />
+         <ColumnConstraints hgrow="SOMETIMES" maxWidth="265.0" minWidth="10.0" prefWidth="265.0" />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints maxHeight="28.5" minHeight="10.0" prefHeight="17.5" vgrow="SOMETIMES" />
+         <RowConstraints maxHeight="30.0" minHeight="5.5" prefHeight="25.5" vgrow="SOMETIMES" />
+         <RowConstraints maxHeight="23.5" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mittente" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Destinatari" GridPane.rowIndex="1" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Oggetto" GridPane.rowIndex="2" />
+      <Text fx:id="mittenteTextField" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" />
+      <Text fx:id="destinatariTextField" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Text fx:id="oggettoTextField" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+   </GridPane>
+   <Button layoutX="502.0" layoutY="360.0" mnemonicParsing="false" onAction="#onWriteButton" text="Scrivi">
+      <graphic>
+         <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../images/invio.png"/>
+         </ImageView>
+      </graphic></Button>
+   <MenuButton layoutX="521.0" layoutY="111.0" mnemonicParsing="false">
+      <items>
+         <MenuItem mnemonicParsing="false" onAction="#onAnswerBtn" text="Rispondi" />
+         <MenuItem mnemonicParsing="false" onAction="#onReplyALLBtn" text="Rispondi a tutti" />
+         <MenuItem mnemonicParsing="false" onAction="#onForwardBtn" text="Inoltra" />
+         <MenuItem mnemonicParsing="false" onAction="#onDeleteBtn" text="Elimina" />
+      </items>
+      <graphic>
+         <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../images/menu-24.png" />
+         </ImageView>
+      </graphic>
+   </MenuButton>
+   <TextArea fx:id="emailTextArea" layoutX="232.0" layoutY="154.0" prefHeight="200.0" prefWidth="354.0" promptText="Nessuna email selezionata" />
+   <Button layoutX="83.0" layoutY="4.0" mnemonicParsing="false" onAction="#onReloadBtn" text="Aggiorna">
+      <graphic>
+         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../images/reload.png" />
+         </ImageView>
+      </graphic>
+   </Button>
+</AnchorPane>
